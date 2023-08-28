@@ -17,11 +17,6 @@ async function main() {
   var b = await askNumber('Enter the value for b: ');
   var c = await askNumber('Enter the value for c: ');
   var d = await askNumber('Enter the value for d: '); 
-
-  /*var a = 11;
-  var b = -22;
-  var c = 19;
-  var d = 44; */
   
   function cubiceq() { // This functions is used to resolve the cubic equation.
     
