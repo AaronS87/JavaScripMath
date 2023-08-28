@@ -93,13 +93,13 @@ async function main() {
 
 function askNumber(question) { // Function named askNumber with "question" as parameter.
   return new Promise(resolve => {  // Return a new named "Promise" that wraps the async. operation with parameter "resolve"
-    rl.question(question, answer => { // rl (read line) 
-      const num = parseFloat(answer);
+    rl.question(question, answer => { // Use the readline interface to present the question and gather the user's input.
+      const num = parseFloat(answer); // Convert a text chain into a decimal numeric value. The function takes the argument "answer" and save it in the constant "num".
       if (isNaN(num)) {  // If the entered information in the Terminal is not a number, then displays the below console.log.
-        console.log('Please enter a valid number.');
-        resolve(askNumber(question));
-      } else { // else, perform the calculation.
-        resolve(num);
+        console.log('Please enter a valid number.'); // If a non-number is introduced, this message is displayed.
+        resolve(askNumber(question)); // Recursively call the askNumber function again to prompt the user for input until a valid number is provided.
+      } else { // If the input was successfully converted to a number.
+        resolve(num); // Resolve the promise with the numeric value entered by the user.
       }
     });
   });
