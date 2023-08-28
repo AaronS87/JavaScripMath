@@ -10,7 +10,7 @@ const rl = readline.createInterface({ // Creating an interface for reading/writt
   output: process.stdout // Output to standard output
 });
 
-//Asynchronous function to execute the main logic of the program and reading the user's input.
+// Asynchronous function to execute the main logic of the program and reading the user's input.
 
 async function main() {
   var a = await askNumber('Enter the value for a: ');
